@@ -18,6 +18,7 @@ MIRYOKU_DOUBLE_TAP_GUARD(u_to_U_##LAYER, &to U_##LAYER)
 MIRYOKU_LAYER_LIST
 #undef MIRYOKU_X
 
+// Not supported by ZMK
 #if defined (MIRYOKU_KLUDGE_DOUBLETAPBOOT)
   #if defined (MIRYOKU_KLUDGE_SOFT_OFF)
 MIRYOKU_DOUBLE_TAP_GUARD(u_soft_off, &soft_off)

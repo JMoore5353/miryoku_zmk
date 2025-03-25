@@ -31,13 +31,13 @@
 
 #include "miryoku_shift_functions.h"
 
-#if defined (MIRYOKU_KLUDGE_MOUSEKEYSPR)
+#if defined (MIRYOKU_KLUDGE_MOUSEKEYSPR)  // Not defined by default
   #include "miryoku_kludge_mousekeyspr.h"
 #else
   #include "miryoku_mousekeys.h"
 #endif
 
-#if defined (MIRYOKU_KLUDGE_TAPDELAY)
+#if defined (MIRYOKU_KLUDGE_TAPDELAY) // Not defined by default
   #include "miryoku_kludge_tapdelay.h"
 #else
   #include "miryoku_behaviors.h"

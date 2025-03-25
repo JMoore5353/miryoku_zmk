@@ -3,14 +3,14 @@
 
 #pragma once
 
-#if defined (MIRYOKU_KLUDGE_DOUBLETAPBOOT)
+#if defined (MIRYOKU_KLUDGE_DOUBLETAPBOOT) // Not supported by ZMK for split keyboards
   #if defined (MIRYOKU_KLUDGE_SOFT_OFF)
     #define U_BOOT &u_soft_off
   #else
     #define U_BOOT &u_bootloader
   #endif
 #else
-  #if defined (MIRYOKU_KLUDGE_SOFT_OFF)
+  #if defined (MIRYOKU_KLUDGE_SOFT_OFF) // Not defined by default
     #define U_BOOT &soft_off
   #else
     #define U_BOOT &bootloader

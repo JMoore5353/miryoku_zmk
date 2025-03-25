@@ -4,6 +4,7 @@
 
 #pragma once
 
+#include "miryoku_layer_definitions.h"
 #include "miryoku_layer_alternatives.h"
 
 #if !defined(MIRYOKU_LAYER_BASE)
@@ -48,7 +49,7 @@
       #define MIRYOKU_LAYER_BASE MIRYOKU_ALTERNATIVES_BASE_HALMAK
     #elif defined (MIRYOKU_ALPHAS_WORKMAN)
       #define MIRYOKU_LAYER_BASE MIRYOKU_ALTERNATIVES_BASE_WORKMAN
-    #elif defined (MIRYOKU_ALPHAS_QWERTY)
+    #elif defined (MIRYOKU_ALPHAS_QWERTY) // TODO: Need to define this
       #define MIRYOKU_LAYER_BASE MIRYOKU_ALTERNATIVES_BASE_QWERTY
     #elif defined (MIRYOKU_ALPHAS_QWERTZ)
       #define MIRYOKU_LAYER_BASE MIRYOKU_ALTERNATIVES_BASE_QWERTZ

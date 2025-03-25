@@ -3,7 +3,7 @@
 
 #pragma once
 
-#if defined (MIRYOKU_KLUDGE_GLOBALSHIFTFUNCTIONS)
+#if defined (MIRYOKU_KLUDGE_GLOBALSHIFTFUNCTIONS) // Not supported by ZMK
   #define U_RGB_TOG &u_rgb_tog
   #define U_RGB_EFF &u_rgb_eff
   #define U_RGB_HUI &u_rgb_hui
