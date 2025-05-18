@@ -7,3 +7,6 @@
 #define MIRYOKU_TAP_QWERTY
 #define MIRYOKU_NAV_VI        // This define takes care of the Media and Mouse layers as well
 
+// Enable pointing
+#define MIRYOKU_MOUSEKEYS_POINTING
+

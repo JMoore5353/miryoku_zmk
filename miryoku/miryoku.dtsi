@@ -7,10 +7,9 @@
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/ext_power.h>
-#include <dt-bindings/zmk/pointing.h> // Recommended by ZMK docs
+#include <input/processors.dtsi>
 
 #include "miryoku.h"
-
 
 / {
   keymap {
@@ -29,8 +28,8 @@ MIRYOKU_LAYER_LIST
 
 #include "miryoku_double_tap_guard.dtsi"
 
-#if defined (MIRYOKU_KLUDGE_MOUSEKEYSPR) // Not defined by default
-  #include "miryoku_kludge_mousekeyspr.dtsi"
+#if defined (MIRYOKU_MOUSEKEYS_POINTING) // Not defined by default
+  #include "miryoku_mousekeys_pointing.dtsi"
 #else
   #include "miryoku_mousekeys.dtsi"
 #endif
