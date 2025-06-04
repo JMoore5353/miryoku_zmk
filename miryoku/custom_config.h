@@ -3,7 +3,7 @@
 
 // Define keyboard layers
 #define MIRYOKU_ALPHAS_QWERTY
-#define MIRYOKU_EXTRA_QWERTY  // Defaults to QWERTY if not defined
+#define MIRYOKU_EXTRA_HANDSDOWN  // Defaults to QWERTY if not defined
 #define MIRYOKU_TAP_QWERTY
 #define MIRYOKU_NAV_VI        // This define takes care of the Media and Mouse layers as well
 
