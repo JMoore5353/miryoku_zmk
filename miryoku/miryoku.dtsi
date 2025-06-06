@@ -28,11 +28,7 @@ MIRYOKU_LAYER_LIST
 
 #include "miryoku_double_tap_guard.dtsi"
 
-#if defined (MIRYOKU_MOUSEKEYS_POINTING) // Not defined by default
-  #include "miryoku_mousekeys_pointing.dtsi"
-#else
-  #include "miryoku_mousekeys.dtsi"
-#endif
+#include "miryoku_mousekeys.dtsi"
 
 // Not defined by default
 #if defined (MIRYOKU_KLUDGE_THUMBCOMBOS)

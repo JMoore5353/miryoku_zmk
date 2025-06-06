@@ -31,14 +31,9 @@
 
 #include "miryoku_shift_functions.h"
 
-#if defined (MIRYOKU_MOUSEKEYS_POINTING)  // Not defined by default
-  // Include required pointing -- needs to be included after miryoku_mousekeys_pointing.h
-  #include <dt-bindings/zmk/pointing.h> // Recommended by ZMK docs
-
-  #include "miryoku_mousekeys_pointing.h"
-#else
-  #include "miryoku_mousekeys.h"
-#endif
+#include "miryoku_mousekeys.h"
+// Include required pointing -- needs to be included after miryoku_mousekeys.h
+#include <dt-bindings/zmk/pointing.h> // Recommended by ZMK docs
 
 #if defined (MIRYOKU_KLUDGE_TAPDELAY) // Not defined by default
   #include "miryoku_kludge_tapdelay.h"
