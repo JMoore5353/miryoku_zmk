@@ -1,0 +1,70 @@
+// Copyright 2022 Manna Harbour
+// https://github.com/manna-harbour/miryoku
+
+// TODO: could define this for a variable number of input keys... Ask Geepers
+#define HANDSDOWN_SHIFT_MACRO_MACRO(NAME, KEY1, KEY2) \
+shift_ ## NAME: shift_ ## NAME { \
+  compatible = "zmk,behavior-macro"; \
+  #binding-cells = <0>; \
+  bindings \
+    = <&macro_tap &kp LS(KEY1) &kp KEY2> \
+    ; \
+}; \
+normal_ ## NAME: normal_ ## NAME { \
+  compatible = "zmk,behavior-macro"; \
+  #binding-cells = <0>; \
+  bindings \
+    = <&macro_tap &kp KEY1 &kp KEY2> \
+    ; \
+};
+
+#define HANDSDOWN_MORPH_MACRO_MACRO(NAME) \
+morph_ ## NAME: morph_ ## NAME { \
+  compatible = "zmk,behavior-mod-morph"; \
+  #binding-cells = <0>; \
+  bindings = <&normal_ ## NAME>, <&shift_ ## NAME>; \
+  mods = <(MOD_LSFT|MOD_RSFT)>; \
+};
+
+#define HANDSDOWN_COMBO_TERM 200
+#define HANDSDOWN_COMBO_MACRO(LAYER, POSITION, BINDING) \
+handsdown_combo_ ## LAYER ## _ ## POSITION { \
+  layers = <LAYER>; \
+  key-positions = <HANDSDOWN_COMBO_ ## POSITION>; \
+  bindings = <BINDING>; \
+  timeout-ms = <HANDSDOWN_COMBO_TERM>; \
+};
+
+
+/{
+  macros {
+    HANDSDOWN_SHIFT_MACRO_MACRO(qu, Q, U)
+    HANDSDOWN_SHIFT_MACRO_MACRO(th, T, H)
+    HANDSDOWN_SHIFT_MACRO_MACRO(sh, S, H)
+    HANDSDOWN_SHIFT_MACRO_MACRO(ch, C, H)
+    HANDSDOWN_SHIFT_MACRO_MACRO(wh, W, H)
+  };
+};
+
+/{
+  behaviors {
+    HANDSDOWN_MORPH_MACRO_MACRO(qu)
+    HANDSDOWN_MORPH_MACRO_MACRO(th)
+    HANDSDOWN_MORPH_MACRO_MACRO(sh)
+    HANDSDOWN_MORPH_MACRO_MACRO(ch)
+    HANDSDOWN_MORPH_MACRO_MACRO(wh)
+  };
+};
+
+/ {
+  combos {
+    compatible = "zmk,combos";
+    HANDSDOWN_COMBO_MACRO(U_EXTRA, J, &kp J)
+    HANDSDOWN_COMBO_MACRO(U_EXTRA, Z, &kp Z)
+    HANDSDOWN_COMBO_MACRO(U_EXTRA, QU, &morph_qu)
+    HANDSDOWN_COMBO_MACRO(U_EXTRA, TH, &morph_th)
+    HANDSDOWN_COMBO_MACRO(U_EXTRA, SH, &morph_sh)
+    HANDSDOWN_COMBO_MACRO(U_EXTRA, CH, &morph_ch)
+    HANDSDOWN_COMBO_MACRO(U_EXTRA, WH, &morph_wh)
+  };
+};

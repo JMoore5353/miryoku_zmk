@@ -3,6 +3,7 @@
 
 #pragma once
 
+// Need to be included before we include zmk/pointing.h
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1250
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 25
 
@@ -25,8 +26,7 @@
 #define U_WH_R &msc SCRL_RIGHT
 #define U_WH_U &msc SCRL_UP
 
-// Need to be included before we include zmk/pointing.h
-// &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
+&mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
 &msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
 

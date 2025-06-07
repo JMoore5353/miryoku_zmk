@@ -45,6 +45,11 @@ MIRYOKU_LAYER_LIST
   #include "miryoku_kludge_bottomrowcombos.dtsi"
 #endif
 
+// HANDSDOWN combos
+#if defined (HANDSDOWN_COMBOS)
+  #include "hands_down_combos.dtsi"
+#endif
+
 // Not defined by default
 #if defined (MIRYOKU_KLUDGE_TAPDELAY)
   #include "miryoku_kludge_tapdelay.dtsi"
