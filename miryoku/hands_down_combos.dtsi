@@ -26,7 +26,7 @@ morph_ ## NAME: morph_ ## NAME { \
   mods = <(MOD_LSFT|MOD_RSFT)>; \
 };
 
-#define HANDSDOWN_COMBO_TERM 10
+#define HANDSDOWN_COMBO_TERM 15
 #define HANDSDOWN_COMBO_TERM_LONG 50
 #define HANDSDOWN_COMBO_MACRO(LAYER, POSITION, BINDING, TAPPING_TERM) \
 handsdown_combo_ ## LAYER ## _ ## POSITION { \
