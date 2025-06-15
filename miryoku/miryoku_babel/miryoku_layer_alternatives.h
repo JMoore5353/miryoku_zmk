@@ -24,12 +24,6 @@ U_MT(LGUI, A),     U_MT(LALT, R),     U_MT(LCTRL, S),    U_MT(LSHFT, T),    &kp 
 U_LT(U_BUTTON, Z), U_MT(RALT, X),     &kp C,             &kp D,             &kp V,             &kp M,             &kp H,             &kp COMMA,         U_MT(RALT, DOT),   U_LT(U_BUTTON, SLASH),\
 U_NP,              U_NP,              U_LT(U_MEDIA, ESC),U_LT(U_NAV, TAB),U_LT(U_MOUSE, SPACE),U_LT(U_SYM, RET),  U_LT(U_NUM, BSPC), U_LT(U_FUN, DEL),  U_NP,              U_NP
 
-#define MIRYOKU_ALTERNATIVES_BASE_HANDSDOWN \
-&kp W,             &kp F,             &kp M,             &kp P,             &kp V,             &kp SLASH,         &kp DOT,           &kp Q,             &kp DQT,           &kp SQT,           \
-U_MT(LGUI, R),     U_MT(LALT, S),     U_MT(LCTRL, N),    U_MT(LSHFT, T),    &kp B,             &kp COMMA,         U_MT(LSHFT, A),    U_MT(LCTRL, E),    U_MT(LALT, I),     U_MT(LGUI, H),     \
-U_LT(U_BUTTON, X), &kp C,             &kp L,             &kp D,             &kp G,             &kp MINUS,         &kp U,             &kp O,             &kp Y,             U_LT(U_BUTTON, K), \
-U_NP,              U_NP,              U_LT(U_MEDIA, ESC),U_LT(U_NAV, TAB),U_LT(U_MOUSE, SPACE),U_LT(U_SYM, RET),  U_LT(U_NUM, BSPC), U_LT(U_FUN, DEL),  U_NP,              U_NP
-
 
 #define MIRYOKU_ALTERNATIVES_TAP_COLEMAKDH \
 &kp Q,             &kp W,             &kp F,             &kp P,             &kp B,             &kp J,             &kp L,             &kp U,             &kp Y,             &kp SQT,           \
