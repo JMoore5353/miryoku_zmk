@@ -1,6 +1,3 @@
-// Copyright 2022 Manna Harbour
-// https://github.com/manna-harbour/miryoku
-
 // TODO: could define this for a variable number of input keys... Ask Geepers
 #define HANDSDOWN_SHIFT_MACRO_MACRO(NAME, KEY1, KEY2) \
 shift_ ## NAME: shift_ ## NAME { \

@@ -1,0 +1,21 @@
+// Sticky key and sticky layer behaviors
+
+#define RELEASE_DELAY_STICKY_LAYER_MS 500
+#define RELEASE_DELAY_STICKY_PRESS_MS 500
+
+&sl {
+  release-after-ms = <RELEASE_DELAY_STICKY_LAYER_MS>;
+};
+
+\{
+  behaviors {
+    skq: sticky_key_quick_release {
+      compatible = "zmk,behavior-sticky-key";
+      #binding-cells = <1>;
+      bindings = <&kp>;
+      release-after-ms = <RELEASE_DELAY_STICKY_PRESS_MS>;
+      quick-release;
+      ignore-modifiers;
+    };
+  };
+};

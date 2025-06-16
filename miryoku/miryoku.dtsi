@@ -30,6 +30,8 @@ MIRYOKU_LAYER_LIST
 
 #include "miryoku_mousekeys.dtsi"
 
+#include "sticky_behaviors.dtsi"
+
 // Not defined by default
 #if defined (MIRYOKU_KLUDGE_THUMBCOMBOS)
   #include "miryoku_kludge_thumbcombos.dtsi"

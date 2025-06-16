@@ -27,6 +27,8 @@ MIRYOKU_SHIFT_FUNCTION(u_out_tog, &out OUT_TOG, &out OUT_USB)
 
 MIRYOKU_SHIFT_FUNCTION(u_caps_word, &caps_word, &kp CAPS)
 
+MIRYOKU_SHIFT_FUNCTION(u_bspc_del, &kp BSPC, &kp DEL)
+
  // Not defined by default
 #if defined (MIRYOKU_KLUDGE_GLOBALSHIFTFUNCTIONS)
 

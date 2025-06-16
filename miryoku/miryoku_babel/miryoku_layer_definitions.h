@@ -5,18 +5,22 @@
 
 #pragma once
 
+#define THUMB_ROW \
+U_NP,  U_NP,  U_LT(U_MEDIA, TAB),  U_LT(U_NAV, &sl U_STICK),  U_LT(U_MOUSE, SPACE),  U_LT(U_SYM, RET),  U_LT(U_NUM, &sl U_STICK),  U_LT(U_FUN, &u_bspc_del),  U_NP,  U_NP
+// TODO: What do you need on your sticky layer(s)?
+
 
 #define MIRYOKU_ALTERNATIVES_BASE_QWERTY \
 &kp Q,             &kp W,             &kp E,             &kp R,             &kp T,             &kp Y,             &kp U,             &kp I,             &kp O,             &kp P,             \
 U_MT(LGUI, A),     U_MT(LALT, S),     U_MT(LCTRL, D),    U_MT(LSHFT, F),    &kp G,             &kp H,             U_MT(LSHFT, J),    U_MT(LCTRL, K),    U_MT(LALT, L),     U_MT(LGUI, SQT),   \
 U_LT(U_BUTTON, Z), U_MT(RALT, X),     &kp C,             &kp V,             &kp B,             &kp N,             &kp M,             &kp COMMA,         U_MT(RALT, DOT),   U_LT(U_BUTTON, SLASH),\
-U_NP,              U_NP,              U_LT(U_MEDIA, ESC),U_LT(U_NAV, TAB),U_LT(U_MOUSE, SPACE),U_LT(U_SYM, RET),  U_LT(U_NUM, BSPC), U_LT(U_FUN, DEL),  U_NP,              U_NP
+THUMB_ROW
 
 #define MIRYOKU_ALTERNATIVES_BASE_HANDSDOWN \
 &kp W,             &kp F,             &kp M,             &kp P,             &kp V,             &kp SLASH,         &kp DOT,           &kp Q,             &kp DQT,           &kp SQT,           \
 U_MT(LGUI, R),     U_MT(LALT, S),     U_MT(LCTRL, N),    U_MT(LSHFT, T),    &kp B,             &kp COMMA,         U_MT(LSHFT, A),    U_MT(LCTRL, E),    U_MT(LALT, I),     U_MT(LGUI, H),     \
 U_LT(U_BUTTON, X), &kp C,             &kp L,             &kp D,             &kp G,             &kp MINUS,         &kp U,             &kp O,             &kp Y,             U_LT(U_BUTTON, K), \
-U_NP,              U_NP,              U_LT(U_MEDIA, ESC),U_LT(U_NAV, TAB),U_LT(U_MOUSE, SPACE),U_LT(U_SYM, RET),  U_LT(U_NUM, BSPC), U_LT(U_FUN, DEL),  U_NP,              U_NP
+THUMB_ROW
 
 #define MIRYOKU_ALTERNATIVES_TAP_QWERTY \
 &kp Q,             &kp W,             &kp E,             &kp R,             &kp T,             &kp Y,             &kp U,             &kp I,             &kp O,             &kp P,             \
@@ -66,3 +70,9 @@ U_NP,              U_NP,              &kp LPAR,          &kp RPAR,          &kp 
 &kp F11,           &kp F4,            &kp F5,            &kp F6,            &kp SLCK,          U_NA,              &kp LSHFT,         &kp LCTRL,         &kp LALT,          &kp LGUI,          \
 &kp F10,           &kp F1,            &kp F2,            &kp F3,            &kp PAUSE_BREAK,   U_NA,              &u_to_U_FUN,       &u_to_U_MEDIA,     &kp RALT,          U_NA,              \
 U_NP,              U_NP,              &kp K_APP,         &kp SPACE,         &kp TAB,           U_NA,              U_NA,              U_NA,              U_NP,              U_NP
+
+#define STICKY_LAYER \
+&none,             &kp Z,             &kp J,             &none,             &none,             &none,             &none,             &none,             &none,             &none,             \
+&none,             &none,             &none,             &skq LSHFT,        &none,             &none,             &skq LSHFT,        &none,             &none,             &none,             \
+&sl U_BUTTON,      &none,             &sl U_NAV,         &kp ESC,           &none,             &none,             &sl U_SYM,         &sl U_NUM,         &none,             &sl U_BUTTON,      \
+U_NP,              U_NP,              &none,             &none,             &none,             &none,             &none,             &none,             U_NP,              U_NP
