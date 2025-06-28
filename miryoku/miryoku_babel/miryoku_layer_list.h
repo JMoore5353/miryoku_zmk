@@ -29,6 +29,6 @@ MIRYOKU_X(STICKY, "Sticky")
 #define U_NUM    7
 #define U_SYM    8
 #define U_FUN    9
-#define U_STICK 10
+#define U_STICKY 10
 
 #endif

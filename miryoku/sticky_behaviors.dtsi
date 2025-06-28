@@ -7,7 +7,7 @@
   release-after-ms = <RELEASE_DELAY_STICKY_LAYER_MS>;
 };
 
-\{
+/ {
   behaviors {
     skq: sticky_key_quick_release {
       compatible = "zmk,behavior-sticky-key";
