@@ -6,7 +6,7 @@
 #pragma once
 
 #define THUMB_ROW \
-U_NP,  U_NP,  U_LT(U_MEDIA, TAB),  U_LT(U_NAV, &sl U_STICKY),  U_LT(U_MOUSE, SPACE),  U_LT(U_SYM, RET),  U_LT(U_NUM, &sl U_STICKY),  U_LT(U_FUN, &u_bspc_del),  U_NP,  U_NP
+U_NP,  U_NP,  U_LT(U_MEDIA, TAB),  U_LST(U_NAV, U_STICKY),  U_LT(U_MOUSE, SPACE),  U_LT(U_SYM, RET),  U_LST(U_NUM, U_STICKY),  U_LT(U_FUN, &u_bspc_del),  U_NP,  U_NP
 // TODO: What do you need on your sticky layer(s)?
 
 
