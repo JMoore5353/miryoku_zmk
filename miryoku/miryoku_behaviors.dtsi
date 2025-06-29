@@ -26,3 +26,21 @@
     };
   };
 };
+
+#define U_HT_MACRO(NAME, HOLD_BEHAVIOR, TAP_BEHAVIOR) \
+/ { \
+  behaviors { \
+    NAME: NAME { \
+      compatible = "zmk,behavior-hold-tap"; \
+      #binding-cells = <2>; \
+      tapping-term-ms = <U_TAPPING_TERM>; \
+      flavor = "tap-preferred"; \
+      bindings = <HOLD_BEHAVIOR>, <TAP_BEHAVIOR>; \
+    }; \
+  }; \
+};
+
+U_HT_MACRO(u_mt, &kp, &kp)
+U_HT_MACRO(u_lt, &mo, &kp)
+U_HT_MACRO(u_lst, &mo, &sl)
+U_HT_MACRO(u_bspc_del_lt, &mo, &u_bspc_del)

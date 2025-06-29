@@ -6,3 +6,4 @@
 #define U_MT(MOD, TAP) &u_mt MOD TAP
 #define U_LT(LAYER, TAP) &u_lt LAYER TAP
 #define U_LST(LAYER, STICKY_LAYER_TAP) &u_lst LAYER STICKY_LAYER_TAP
+#define U_BSPC_LT(LAYER) &u_bspc_del_lt LAYER 0
