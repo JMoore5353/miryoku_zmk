@@ -18,6 +18,10 @@ normal_ ## NAME: normal_ ## NAME { \
     ; \
 };
 
+// TODO: The mod-shift behavior is dependent on the shift key hold-tap timeout-ms...
+// For example, if I type the "th" really fast after pressing the shift key, then I get
+// the "normal" version of this mod-morph, which then gets returned to the shift modifier
+// (which has now triggered due to time.)
 #define HANDSDOWN_MORPH_MACRO_MACRO(NAME) \
 morph_ ## NAME: morph_ ## NAME { \
   compatible = "zmk,behavior-mod-morph"; \
